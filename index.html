@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ved@prakash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+  <div class="themes">
+    <div class="colors">
+      <h3>BACKGROUND COLORS</h3>
+      <ul class="theme-colors">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <br>
+      <h3>TEXT COLORS</h3>
+      <ul class="logo-colors">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+
+      </ul>
+    </div>
+    <p class="themes-btn"><i class=" fa fa-gear fa-2x fa-spin"></i></p>
+  </div>
+  
+      <h1>COLOR SWITHCER</h1>
+      <h2>choose your favourite color now !</h2>
+   
+  
+  
+  
+
+
+
+  <script>
+    $(document).ready(function(){
+      $('ul.theme-colors li').click(function(){
+        $('body').css('background', $(this).css('color'));
+      });
+
+      $('ul.logo-colors li').click(function(){
+        var theme = $(this).css('background-color');
+        $('h1,h2').css('color',theme);
+        $('h1,h2 span,h2').css('color'. theme);
+      });
+      
+      $('p.themes-btn').click(function(){
+        $('.colors').toggleClass('active');
+
+      });
+    });
+
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>
